@@ -1,0 +1,17 @@
+As a visitor:
+	- I want to view all products (index)
+	- I want to view details of each product (show)
+			- price
+			- description
+			- reviews
+			- picture
+		(So that the user is knowledgeable about their product) 
+	- I want to sign up and become a user
+
+As a user:
+	- I want to write reviews for products I have purchased
+
+As an admin:
+	- I want to be able to add products
+	- I want to be able to delete products
+	- I want to be able to edit products
