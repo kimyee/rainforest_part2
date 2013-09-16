@@ -1,4 +1,19 @@
 RainforestPart2::Application.routes.draw do
+  get "products/index"
+
+  get "products/create"
+
+  get "products/new"
+
+  get "products/edit"
+
+  get "products/show"
+
+  get "products/update"
+
+  get "products/destroy"
+
+    resources :products
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
