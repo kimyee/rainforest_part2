@@ -4,16 +4,14 @@ describe ProductsController do
 
   # let!(:product2) { FactoryGirl.create(:product) }
 
-  it "should call all on Product" do
-    Product.should_receive(:all)
+  it "should return okay" do
+    Product.stub(:all).and_return([])
     get :index
+    expect(response).to be_okay
   end
 
   it "should assign products to @products" do
     Product.should_receive(:all).and_return([])
-    #let!(:product1) { FactoryGirl.create(:product) }
-    #let!(:product2) { FactoryGirl.create(:product) }
-    #products = [product1, product2]
     get :index
     expect(assigns[:products]).to eq([])
   end
@@ -22,7 +20,7 @@ describe ProductsController do
     product1 = FactoryGirl.create(:product)
     product2 = FactoryGirl.create(:product)
     get :index
-    expect(assigns[:products]).to eq(Product.all)
+    expect(assigns[:products]).to match([product1, product2])
   end
 
   # describe "GET 'index'" do
